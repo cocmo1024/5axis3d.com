@@ -1,0 +1,5 @@
+# 5axis3d.com — Cloudflare Pages redirects
+# Trailing-slash consistency is handled natively by Cloudflare Pages:
+# each folder's index.html is served at its clean trailing-slash URL and
+# the bare path is redirected to it automatically. The www subdomain is
+# handled at DNS level. No custom redirect rules are required.

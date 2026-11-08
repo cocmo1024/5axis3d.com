@@ -1,0 +1,141 @@
+# 5axis3d.com — full text (core explainer content)
+
+5-axis 3D printing is additive manufacturing in which the nozzle and the part re-orient relative to each other during printing. This file collects the hub's definitions, guide texts and landscape summary in plain markdown for AI systems and offline reading. Content may be cited with attribution to 5axis3d.com.
+
+## Definitions — the glossary
+
+### 5-axis 3D printing
+
+Additive manufacturing where the nozzle and part re-orient relative to each other during printing — three linear axes plus two rotary axes — so material can be deposited along directions other than straight up. (https://5axis3d.com/glossary/#5-axis-3d-printing)
+
+### Conformal printing
+
+Layers that follow (conform to) a curved surface — the surface of the growing part, or an existing object. In printed electronics the word centres on printing onto existing surfaces; in FDM it usually means curved layers. This site uses it for both, and says which. (https://5axis3d.com/glossary/#conformal-printing)
+
+### Non-planar printing
+
+Toolpaths not confined to flat horizontal planes, producing curved layers. Used almost interchangeably with "conformal" in the FDM community; the stricter term of the two. (https://5axis3d.com/glossary/#non-planar-printing)
+
+### RTCP
+
+Controller compensation that keeps the nozzle tip exactly on the programmed toolpath while rotary axes move. Without it, every tilt displaces the tip and conformal paths distort — the sharpest question to ask any "5-axis" machine. (https://5axis3d.com/glossary/#rtcp)
+
+### Trunnion
+
+A tilting-and-rotating work table carrying the part through both rotary axes, inherited from 5-axis CNC machining. The most common configuration in desktop 5-axis printing — including our platform. (https://5axis3d.com/glossary/#trunnion)
+
+### 3+2 printing
+
+Re-orient between sections, print flat layers within each. Simpler in every way than simultaneous motion — and not conformal, whatever the brochure says. (https://5axis3d.com/glossary/#3-plus-2-printing)
+
+### Simultaneous interpolation
+
+All axes moving together under one coordinated motion command, so orientation changes continuously while material is deposited. The motion mode true curved layers require. (https://5axis3d.com/glossary/#simultaneous-interpolation)
+
+### Stair-stepping
+
+The stepped finish flat layers leave on any curved surface. Thinner layers shrink the steps but never remove them; curved layers eliminate the cause rather than the symptom. (https://5axis3d.com/glossary/#stair-stepping)
+
+### Substrate printing
+
+Printing onto an existing object — printed, machined or moulded — instead of a flat bed, following its surface with multi-axis orientation. Enables repair, added features and personalisation. (https://5axis3d.com/glossary/#substrate-printing)
+
+### Self-supporting angle
+
+The steepest overhang a process can print without support. On a 3-axis machine it's roughly 45° from vertical; a 5-axis machine changes the angle itself by re-orienting the part, which is the whole trick. (https://5axis3d.com/glossary/#self-supporting-angle)
+
+### Orientation field
+
+The assignment of a nozzle direction to every point of a non-planar toolpath — the core data a conformal slicer computes, and the thing flat slicers don't have at all. (https://5axis3d.com/glossary/#orientation-field)
+
+### Singularity
+
+A pose where a rotary axis must spin infinitely fast to maintain the path — a real failure mode of 5-axis toolpaths near vertical orientations, handled (or not) by the slicer and controller. (https://5axis3d.com/glossary/#singularity)
+
+
+## Guides
+
+### What counts as "5-axis" printing?
+
+5-axis 3D printing is additive manufacturing in which the nozzle and the part re-orient relative to each other during printing: three linear axes (X, Y, Z) plus two rotary axes. The rotary axes may sit in the table, in the head, or be split between both. In 3+2 (indexed) printing the axes re-orient between sections and layers stay flat; in simultaneous 5-axis printing all axes interpolate during deposition, which is what makes true conformal printing — curved, non-planar printing — possible. None of it works without RTCP, the controller compensation that keeps the nozzle tip on the programmed path while the machine tilts.
+
+A printer earns the label when the nozzle and the part can be re-oriented relative to each other while printing — three linear axes (X, Y, Z) plus two rotary axes working together. The rotary axes can live in three places: in the table (a tilting, rotating trunnion), in the head (a swivelling nozzle), or split between both. Each choice changes the machine's stiffness, collision behaviour and usable volume.
+
+ Two distinctions matter more than the axis count:
+
+ 
+ 
+- 3+2 (indexed) — re-orient between sections, print flat layers within each. Easier, but the layers stay flat and seams appear.
+ 
+- Simultaneous 5-axis — all axes interpolate during deposition, orientation changes continuously, and layers can genuinely curve. This is the mode conformal printing needs.
+ 
+- RTCP is not optional. Without rotation tool-centre-point compensation, tilting the machine drags the nozzle off its programmed path. Any serious 5-axis claim should name how the controller handles it.
+
+Source: https://5axis3d.com/guides/what-counts-as-5-axis-printing/
+
+### Non-planar slicing, explained
+
+Non-planar slicing generates toolpaths on the part's surfaces instead of intersecting the model with flat horizontal planes. Every point of the path carries a nozzle orientation — usually the surface normal — so orientation is a continuous field that drives both rotary axes. Extrusion rates adapt where surfaces tilt, and the slicer must check collisions between nozzle, part and machine in five axes. The output is still G-code, but with rotary-axis words on most moves, so ordinary 3-axis firmware cannot run it.
+
+A conventional slicer intersects the model with horizontal planes and emits flat perimeters. A non-planar slicer instead generates toolpaths on the part's surfaces: offsetting paths across the geometry, assigning each point a nozzle orientation (usually the surface normal), then checking the whole motion for collisions between nozzle, part and machine.
+
+ 
+ 
+- Orientation is a field, not a setting — it varies continuously across the part and drives both rotary axes at every moment.
+ 
+- Extrusion must adapt — layer thickness and flow change where surfaces tilt and converge; flat-slicer flow maths doesn't carry over.
+ 
+- The output is still G-code — but with A/B (rotary) words on most moves, which is why ordinary printer firmware can't run it.
+ 
+- Support logic inverts — instead of propping up overhangs, the slicer re-orients the part so overhangs become printable walls.
+ 
+ This is why the software, not the frame, is the field's bottleneck — and why slicer collaboration is half of what we do.
+
+Source: https://5axis3d.com/guides/non-planar-slicing-explained/
+
+### Reading the landscape: six routes to multi-axis
+
+“Multi-axis printing” covers six distinct routes: trunnion-table FDM, tilting-head machines, 3+2 indexing, belt printers, robotic-arm extrusion and print-and-mill hybrids. Only the first two produce true conformal (non-planar) layers; 3+2 keeps layers flat within each section, and belt printers add a single fixed-angle axis rather than rotary re-orientation. The routes differ in usable volume, stiffness, collision behaviour, cost and maturity — which is why the honest comparison is by route, not by axis count.
+
+"Multi-axis printing" covers machines with very different ambitions. Trunnion-table FDM (our route) targets true conformal layers at bench scale. Tilting-head designs keep a big flat bed but fight head collisions. 3+2 indexing is the pragmatic middle. Belt printers add one endless axis for long parts at a fixed angle — useful, but not conformal. Robotic arms trade accuracy for metre-scale freedom. Print-and-mill hybrids buy surface finish with a machining pass, at hybrid prices.
+
+ The full comparison — strengths, limits, maturity, and named projects for each route — is in the technology landscape below. If a route or project is missing, that is a bug in this page, and the contribution path is how it gets fixed.
+
+Source: https://5axis3d.com/guides/reading-the-landscape/
+
+### Starting 5-axis research: a practical checklist
+
+Labs starting 5-axis 3D printing research save the most time by deciding four things before hardware arrives: benchmark geometries (a dome, a 70° overhang wall, a curved duct, a curved substrate), the measurements that make claims publishable, a real budget for slicing software or collaboration, and a plan to publish failures as well as results. Hardware without toolpaths is furniture: the slicer, not the frame, is the field's bottleneck.
+
+For labs setting up a non-planar programme, the questions that save the most time are asked before any hardware arrives:
+
+ 
+ 
+- Fix your benchmark geometries first — a dome (stair-stepping), a 70° overhang wall (support-free claim), a curved duct (internal access), a print onto a curved substrate. Every route can be compared on the same four parts.
+ 
+- Decide what you will measure — surface roughness on curves, interlayer strength along vs. across conformal layers, dimensional error vs. tilt angle. Publishable claims need these numbers.
+ 
+- Budget for the slicer, not just the machine — seats, development time or a collaboration agreement; hardware without toolpaths is furniture.
+ 
+- Plan to publish the failures — collision cases, singularity behaviour, failed orientations. In a field this young, negative results are the scarcest resource.
+
+Source: https://5axis3d.com/guides/starting-5-axis-research/
+
+
+## Technology landscape — summary
+
+There are six serious routes to printing in more than three axes: tilt–rotate (trunnion) tables and tilting heads — the two routes to true conformal, non-planar layers; 3+2 indexing, which re-orients between flat-layer sections; belt printers, which add one endless fixed-angle axis; robotic-arm extrusion for metre scale; and 5-axis print-and-mill hybrids. They trade usable volume, stiffness, accuracy, cost and maturity against each other, and no route wins on all five. This page compares them side by side and lists the projects pursuing each — a November 2026 snapshot that is openly incomplete.
+
+Source: https://5axis3d.com/landscape/
+
+
+## The prototype platform — key facts
+
+- Process: FDM / FFF with conformal (non-planar) slicing
+- Motion: X / Y / Z linear + A / B / C rotary axes, simultaneous interpolation
+- Axis travel: X 220 × Y 190 × Z 180 mm (reference prototype configuration)
+- Tool-centre control: RTCP
+- Controller: POCENDER / PCD3D multi-axis controller, touchscreen + web panel
+- Software: curved-surface (conformal) slicer, developed in-house
+- Stage: prototype — built to order for research institutes, universities and advanced makers; not a production product
+- Contact: cqq365@gmail.com — https://5axis3d.com/contact/

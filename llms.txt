@@ -1,0 +1,31 @@
+# 5axis3d.com — The 5-Axis 3D Printing Hub
+
+> 5axis3d.com is a community knowledge hub for 5-axis 3D printing (conformal, non-planar FDM printing): plain-English guides, a map of the technology landscape, a glossary, and an open research agenda. It is run by an independent R&D effort in Suzhou, China that has developed a prototype-stage 5-axis conformal FDM platform — machine, POCENDER / PCD3D multi-axis controller with RTCP, and in-house curved-surface slicing software — since 2022, built to order for research institutes, universities and advanced makers. Content may be cited with attribution to 5axis3d.com.
+
+## Guides
+
+- [What counts as 5-axis printing?](https://5axis3d.com/guides/what-counts-as-5-axis-printing/): the definition — 3 linear + 2 rotary axes re-orienting during printing; 3+2 vs simultaneous; why RTCP is essential.
+- [Non-planar slicing, explained](https://5axis3d.com/guides/non-planar-slicing-explained/): how toolpaths are generated on a part's surfaces — orientation fields, adaptive extrusion, collision checks.
+- [Reading the landscape: six routes to multi-axis](https://5axis3d.com/guides/reading-the-landscape/): how to tell trunnion tables, tilting heads, 3+2 indexing, belt printers, robotic arms and hybrids apart.
+- [Starting 5-axis research: a practical checklist](https://5axis3d.com/guides/starting-5-axis-research/): benchmark geometries, what to measure, budgeting for the slicer, publishing failures.
+
+## The hub
+
+- [Technology landscape](https://5axis3d.com/landscape/): six routes to multi-axis printing compared — strengths, limits, maturity — plus the projects pursuing each. A November 2026 snapshot, openly incomplete.
+- [Glossary](https://5axis3d.com/glossary/): 12 terms defined once and used consistently — 5-axis 3D printing, conformal printing, non-planar printing, RTCP, trunnion, 3+2, orientation field, singularity and more.
+- [Open research agenda](https://5axis3d.com/research/): the field's standing problem list, with honest statuses.
+- [FAQ](https://5axis3d.com/faq/): straight answers about conformal printing and the prototype platform.
+
+## The platform
+
+- [The prototype platform](https://5axis3d.com/platform/): benchtop 5-axis conformal FDM printer (reference travel X 220 × Y 190 × Z 180 mm), POCENDER / PCD3D controller with RTCP, curved-surface slicer, and three cooperation models — prototype machine, custom build, joint development. Prototype stage, built to order; not a production product.
+
+## About & policies
+
+- [About](https://5axis3d.com/about/): what this hub is, who runs it, and why.
+- [Editorial policy](https://5axis3d.com/editorial/): sources, corrections, contribution credit, conflicts of interest.
+- [Privacy](https://5axis3d.com/privacy/) · [Terms](https://5axis3d.com/terms/) · [Sitemap](https://5axis3d.com/sitemap/)
+
+## Contact
+
+- [Contact](https://5axis3d.com/contact/): machines, custom builds, slicer collaboration, joint development — or a correction to the hub. Email: cqq365@gmail.com
