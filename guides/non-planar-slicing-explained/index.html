@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>Non-Planar Slicing Explained — How Curved Layers Are Made</title>
+    <meta name="description" content="Non-planar slicing puts toolpaths on the part's surfaces, not in flat planes: orientation fields, adaptive extrusion, collision checks and 5-axis G-code." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://5axis3d.com/guides/non-planar-slicing-explained/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="5axis3d.com" />
+    <meta property="og:title" content="Non-Planar Slicing Explained — How Curved Layers Are Made" />
+    <meta property="og:description" content="Non-planar slicing puts toolpaths on the part's surfaces, not in flat planes: orientation fields, adaptive extrusion, collision checks and 5-axis G-code." />
+    <meta property="og:url" content="https://5axis3d.com/guides/non-planar-slicing-explained/" />
+    <meta property="og:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Non-Planar Slicing Explained — How Curved Layers Are Made" />
+    <meta name="twitter:description" content="Non-planar slicing puts toolpaths on the part's surfaces, not in flat planes: orientation fields, adaptive extrusion, collision checks and 5-axis G-code." />
+    <meta name="twitter:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://5axis3d.com/#org",
+      "name": "5axis3d.com",
+      "url": "https://5axis3d.com/",
+      "email": "cqq365@gmail.com",
+      "description": "The knowledge hub for five-axis 3D printing — guides, technology landscape, glossary and open research agenda for conformal (non-planar) FDM printing — and developers of a prototype-stage 5-axis printer platform, custom machines and curved-surface slicing software, developed with research institutes and universities since 2022.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suzhou",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "cqq365@gmail.com",
+        "availableLanguage": [
+          "English"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://5axis3d.com/#site",
+      "url": "https://5axis3d.com/",
+      "name": "5axis3d.com",
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://5axis3d.com/guides/non-planar-slicing-explained/#webpage",
+      "url": "https://5axis3d.com/guides/non-planar-slicing-explained/",
+      "name": "Non-Planar Slicing Explained — How Curved Layers Are Made",
+      "description": "Non-planar slicing puts toolpaths on the part's surfaces, not in flat planes: orientation fields, adaptive extrusion, collision checks and 5-axis G-code.",
+      "isPartOf": {
+        "@id": "https://5axis3d.com/#site"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "TechArticle",
+      "headline": "Non-planar slicing, explained",
+      "description": "Non-planar slicing puts toolpaths on the part's surfaces, not in flat planes: orientation fields, adaptive extrusion, collision checks and 5-axis G-code.",
+      "author": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "mainEntityOfPage": {
+        "@id": "https://5axis3d.com/guides/non-planar-slicing-explained/#webpage"
+      },
+      "inLanguage": "en",
+      "url": "https://5axis3d.com/guides/non-planar-slicing-explained/",
+      "image": "https://5axis3d.com/assets/illus-hero.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can Cura or PrusaSlicer generate non-planar toolpaths?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Mainstream slicers intersect the model with horizontal planes and emit flat-layer G-code with no rotary-axis moves. Non-planar toolpaths require surface-based slicing — paths generated on the part's geometry, with orientation and collision checks in five axes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does a non-planar slicer actually output?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Still G-code — but with A/B rotary words on most moves, because each point of the path carries its own nozzle orientation. That is why ordinary 3-axis printer firmware cannot run it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why is slicing considered the bottleneck of 5-axis printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The mechanics of a fifth axis are comparatively simple; generating collision-free, well-oriented curved toolpaths on arbitrary geometry is an open algorithmic problem. Hardware without toolpaths is furniture, which is why slicer development and collaboration dominate research in this field."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://5axis3d.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Knowledge hub",
+          "item": "https://5axis3d.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Non-planar slicing, explained",
+          "item": "https://5axis3d.com/guides/non-planar-slicing-explained/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body data-page="guides">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="/">5AXIS<b>3D</b></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">Menu</button>
+        <nav class="main" id="main-nav" aria-label="Main">
+          <a href="/guides/" data-spy="guides">Knowledge hub</a>
+          <a href="/landscape/" data-spy="landscape">Landscape</a>
+          <a href="/glossary/" data-spy="glossary">Glossary</a>
+          <a href="/platform/" data-spy="platform">The platform</a>
+          <a href="/research/" data-spy="research">Research agenda</a>
+          <a href="/faq/" data-spy="faq">FAQ</a>
+        </nav>
+        <a class="btn small header-cta" href="/contact/">Talk to us</a>
+      </div>
+    </header>
+    <main id="top">
+      <section class="section">
+        <div class="wrap">
+          <p class="crumbs"><a href="/">Home</a> · <a href="/guides/">Knowledge hub</a> · Non-planar slicing, explained</p>
+          <div class="sec-head">
+            <span class="tag">Knowledge hub · Guide 02</span>
+            <h1 class="page-title">Non-planar slicing, explained</h1>
+          </div>
+          <div class="note tldr">
+            <h2>In short</h2>
+            <p>Non-planar slicing generates toolpaths on the part's surfaces instead of intersecting the model with flat horizontal planes. Every point of the path carries a nozzle orientation — usually the surface normal — so orientation is a continuous field that drives both rotary axes. Extrusion rates adapt where surfaces tilt, and the slicer must check collisions between nozzle, part and machine in five axes. The output is still G-code, but with rotary-axis words on most moves, so ordinary 3-axis firmware cannot run it.</p>
+          </div>
+          <article class="guide-card standalone" style="margin-top:30px;">
+<p>A conventional slicer intersects the model with horizontal planes and emits flat perimeters. A non-planar slicer instead generates toolpaths <b>on the part's surfaces</b>: offsetting paths across the geometry, assigning each point a nozzle orientation (usually the surface normal), then checking the whole motion for collisions between nozzle, part and machine.</p>
+              <ul>
+                <li><b>Orientation is a field, not a setting</b> — it varies continuously across the part and drives both rotary axes at every moment.</li>
+                <li><b>Extrusion must adapt</b> — layer thickness and flow change where surfaces tilt and converge; flat-slicer flow maths doesn't carry over.</li>
+                <li><b>The output is still G-code</b> — but with A/B (rotary) words on most moves, which is why ordinary printer firmware can't run it.</li>
+                <li><b>Support logic inverts</b> — instead of propping up overhangs, the slicer re-orients the part so overhangs become printable walls.</li>
+              </ul>
+              <p>This is why the software, not the frame, is the field's bottleneck — and why slicer collaboration is half of what we do.</p>
+          </article>
+          <div class="qa-sec">
+            <h2>Questions this page answers</h2>
+            <div class="faq-list">
+              <details class="faq">
+                <summary>Can Cura or PrusaSlicer generate non-planar toolpaths?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>No. Mainstream slicers intersect the model with horizontal planes and emit flat-layer G-code with no rotary-axis moves. Non-planar toolpaths require surface-based slicing — paths generated on the part's geometry, with orientation and collision checks in five axes.</p></div>
+              </details>
+              <details class="faq">
+                <summary>What does a non-planar slicer actually output?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>Still G-code — but with A/B rotary words on most moves, because each point of the path carries its own nozzle orientation. That is why ordinary 3-axis printer firmware cannot run it.</p></div>
+              </details>
+              <details class="faq">
+                <summary>Why is slicing considered the bottleneck of 5-axis printing?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>The mechanics of a fifth axis are comparatively simple; generating collision-free, well-oriented curved toolpaths on arbitrary geometry is an open algorithmic problem. Hardware without toolpaths is furniture, which is why slicer development and collaboration dominate research in this field.</p></div>
+              </details>
+            </div>
+          </div>
+<p class="last-updated">Last updated: November 2026</p>
+          <div class="more-links">
+            <h2>Related pages</h2>
+            <ul>
+              <li><a href="/guides/reading-the-landscape/">Next guide: Reading the landscape</a></li>
+              <li><a href="/glossary/#orientation-field">Glossary: Orientation field, defined</a></li>
+              <li><a href="/glossary/#singularity">Glossary: Singularity, defined</a></li>
+              <li><a href="/platform/#control">Our platform: the curved-surface slicer in practice</a></li>
+              <li><a href="/research/">Research agenda: the slicing problem itself</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="/">5AXIS<b>3D</b></a>
+            <p>The knowledge hub for five-axis 3D printing — guides, landscape, glossary and research agenda — and a prototype conformal FDM platform: machines, custom builds and curved-surface slicing software, developed openly with research institutes, universities and advanced makers since 2022.</p>
+          </div>
+          <div>
+            <h4>Knowledge hub</h4>
+            <ul>
+              <li><a href="/guides/">Guides</a></li>
+              <li><a href="/landscape/">Technology landscape</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/research/">Research agenda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/#why">Why conformal</a></li>
+              <li><a href="/platform/">The platform</a></li>
+              <li><a href="/platform/#control">Control &amp; software</a></li>
+              <li><a href="/platform/#who">Who it's for</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Join in</h4>
+            <ul>
+              <li><a href="/platform/#who">Who it's for</a></li>
+              <li><a href="/platform/#process">How it works</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="mailto:cqq365@gmail.com">cqq365@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="foot-links" aria-label="Trust and site information"><a href="/about/">About</a><a href="/editorial/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a></nav>
+          <div class="legal">
+          <span>© 2026 5axis3d.com · Suzhou, China</span>
+          <span>Prototype-stage platform — every build is configured per project.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c2fc9bc804c64eb2a7efbc5bad7865f3"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
