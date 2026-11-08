@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>5-Axis 3D Printing Glossary — 12 Terms, Defined Plainly</title>
+    <meta name="description" content="Twelve terms that define 5-axis 3D printing, in plain English: conformal and non-planar printing, RTCP, trunnion, 3+2, orientation fields, singularities." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://5axis3d.com/glossary/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="5axis3d.com" />
+    <meta property="og:title" content="5-Axis 3D Printing Glossary — 12 Terms, Defined Plainly" />
+    <meta property="og:description" content="Twelve terms that define 5-axis 3D printing, in plain English: conformal and non-planar printing, RTCP, trunnion, 3+2, orientation fields, singularities." />
+    <meta property="og:url" content="https://5axis3d.com/glossary/" />
+    <meta property="og:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5-Axis 3D Printing Glossary — 12 Terms, Defined Plainly" />
+    <meta name="twitter:description" content="Twelve terms that define 5-axis 3D printing, in plain English: conformal and non-planar printing, RTCP, trunnion, 3+2, orientation fields, singularities." />
+    <meta name="twitter:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://5axis3d.com/#org",
+      "name": "5axis3d.com",
+      "url": "https://5axis3d.com/",
+      "email": "cqq365@gmail.com",
+      "description": "The knowledge hub for five-axis 3D printing — guides, technology landscape, glossary and open research agenda for conformal (non-planar) FDM printing — and developers of a prototype-stage 5-axis printer platform, custom machines and curved-surface slicing software, developed with research institutes and universities since 2022.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suzhou",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "cqq365@gmail.com",
+        "availableLanguage": [
+          "English"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://5axis3d.com/#site",
+      "url": "https://5axis3d.com/",
+      "name": "5axis3d.com",
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://5axis3d.com/glossary/#webpage",
+      "url": "https://5axis3d.com/glossary/",
+      "name": "5-Axis 3D Printing Glossary — 12 Terms, Defined Plainly",
+      "description": "Twelve terms that define 5-axis 3D printing, in plain English: conformal and non-planar printing, RTCP, trunnion, 3+2, orientation fields, singularities.",
+      "isPartOf": {
+        "@id": "https://5axis3d.com/#site"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "DefinedTermSet",
+      "@id": "https://5axis3d.com/glossary/#glossary",
+      "name": "5-Axis 3D Printing Glossary",
+      "url": "https://5axis3d.com/glossary/",
+      "hasDefinedTerm": [
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#5-axis-3d-printing",
+          "url": "https://5axis3d.com/glossary/#5-axis-3d-printing",
+          "name": "5-axis 3D printing",
+          "description": "Additive manufacturing where the nozzle and part re-orient relative to each other during printing — three linear axes plus two rotary axes — so material can be deposited along directions other than straight up.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#conformal-printing",
+          "url": "https://5axis3d.com/glossary/#conformal-printing",
+          "name": "Conformal printing",
+          "description": "Layers that follow (conform to) a curved surface — the surface of the growing part, or an existing object. In printed electronics the word centres on printing onto existing surfaces; in FDM it usually means curved layers. This site uses it for both, and says which.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#non-planar-printing",
+          "url": "https://5axis3d.com/glossary/#non-planar-printing",
+          "name": "Non-planar printing",
+          "description": "Toolpaths not confined to flat horizontal planes, producing curved layers. Used almost interchangeably with \"conformal\" in the FDM community; the stricter term of the two.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#rtcp",
+          "url": "https://5axis3d.com/glossary/#rtcp",
+          "name": "RTCP",
+          "alternateName": "Rotation Tool Centre Point",
+          "description": "Controller compensation that keeps the nozzle tip exactly on the programmed toolpath while rotary axes move. Without it, every tilt displaces the tip and conformal paths distort — the sharpest question to ask any \"5-axis\" machine.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#trunnion",
+          "url": "https://5axis3d.com/glossary/#trunnion",
+          "name": "Trunnion",
+          "description": "A tilting-and-rotating work table carrying the part through both rotary axes, inherited from 5-axis CNC machining. The most common configuration in desktop 5-axis printing — including our platform.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#3-plus-2-printing",
+          "url": "https://5axis3d.com/glossary/#3-plus-2-printing",
+          "name": "3+2 printing",
+          "alternateName": "Indexed",
+          "description": "Re-orient between sections, print flat layers within each. Simpler in every way than simultaneous motion — and not conformal, whatever the brochure says.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#simultaneous-interpolation",
+          "url": "https://5axis3d.com/glossary/#simultaneous-interpolation",
+          "name": "Simultaneous interpolation",
+          "description": "All axes moving together under one coordinated motion command, so orientation changes continuously while material is deposited. The motion mode true curved layers require.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#stair-stepping",
+          "url": "https://5axis3d.com/glossary/#stair-stepping",
+          "name": "Stair-stepping",
+          "description": "The stepped finish flat layers leave on any curved surface. Thinner layers shrink the steps but never remove them; curved layers eliminate the cause rather than the symptom.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#substrate-printing",
+          "url": "https://5axis3d.com/glossary/#substrate-printing",
+          "name": "Substrate printing",
+          "description": "Printing onto an existing object — printed, machined or moulded — instead of a flat bed, following its surface with multi-axis orientation. Enables repair, added features and personalisation.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#self-supporting-angle",
+          "url": "https://5axis3d.com/glossary/#self-supporting-angle",
+          "name": "Self-supporting angle",
+          "description": "The steepest overhang a process can print without support. On a 3-axis machine it's roughly 45° from vertical; a 5-axis machine changes the angle itself by re-orienting the part, which is the whole trick.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#orientation-field",
+          "url": "https://5axis3d.com/glossary/#orientation-field",
+          "name": "Orientation field",
+          "description": "The assignment of a nozzle direction to every point of a non-planar toolpath — the core data a conformal slicer computes, and the thing flat slicers don't have at all.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        },
+        {
+          "@type": "DefinedTerm",
+          "@id": "https://5axis3d.com/glossary/#singularity",
+          "url": "https://5axis3d.com/glossary/#singularity",
+          "name": "Singularity",
+          "description": "A pose where a rotary axis must spin infinitely fast to maintain the path — a real failure mode of 5-axis toolpaths near vertical orientations, handled (or not) by the slicer and controller.",
+          "inDefinedTermSet": "https://5axis3d.com/glossary/#glossary"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://5axis3d.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Glossary",
+          "item": "https://5axis3d.com/glossary/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body data-page="glossary">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="/">5AXIS<b>3D</b></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">Menu</button>
+        <nav class="main" id="main-nav" aria-label="Main">
+          <a href="/guides/" data-spy="guides">Knowledge hub</a>
+          <a href="/landscape/" data-spy="landscape">Landscape</a>
+          <a href="/glossary/" data-spy="glossary">Glossary</a>
+          <a href="/platform/" data-spy="platform">The platform</a>
+          <a href="/research/" data-spy="research">Research agenda</a>
+          <a href="/faq/" data-spy="faq">FAQ</a>
+        </nav>
+        <a class="btn small header-cta" href="/contact/">Talk to us</a>
+      </div>
+    </header>
+    <main id="top">
+<section class="section" id="glossary">
+        <div class="wrap">
+          <p class="crumbs"><a href="/">Home</a> · Glossary</p>
+          <div class="sec-head">
+            <span class="tag">Glossary</span>
+            <h1 class="page-title">The words of the field, defined once and used consistently.</h1>
+            <p class="lede">Multi-axis printing borrows vocabulary from CNC machining, slicing software and printed electronics — and the same word doesn't always mean the same thing in each. These are the definitions this site uses.</p>
+          </div>
+          <dl class="glos">
+            <div class="term" id="5-axis-3d-printing">
+              <dt>5-axis 3D printing</dt>
+              <dd>Additive manufacturing where the nozzle and part re-orient relative to each other during printing — three linear axes plus two rotary axes — so material can be deposited along directions other than straight up.</dd>
+            </div>
+            <div class="term" id="conformal-printing">
+              <dt>Conformal printing</dt>
+              <dd>Layers that follow (conform to) a curved surface — the surface of the growing part, or an existing object. In printed electronics the word centres on printing onto existing surfaces; in FDM it usually means curved layers. This site uses it for both, and says which.</dd>
+            </div>
+            <div class="term" id="non-planar-printing">
+              <dt>Non-planar printing</dt>
+              <dd>Toolpaths not confined to flat horizontal planes, producing curved layers. Used almost interchangeably with "conformal" in the FDM community; the stricter term of the two.</dd>
+            </div>
+            <div class="term" id="rtcp">
+              <dt>RTCP<span class="alt">ROTATION TOOL CENTRE POINT</span></dt>
+              <dd>Controller compensation that keeps the nozzle tip exactly on the programmed toolpath while rotary axes move. Without it, every tilt displaces the tip and conformal paths distort — the sharpest question to ask any "5-axis" machine.</dd>
+            </div>
+            <div class="term" id="trunnion">
+              <dt>Trunnion</dt>
+              <dd>A tilting-and-rotating work table carrying the part through both rotary axes, inherited from 5-axis CNC machining. The most common configuration in desktop 5-axis printing — including our platform.</dd>
+            </div>
+            <div class="term" id="3-plus-2-printing">
+              <dt>3+2 printing<span class="alt">INDEXED</span></dt>
+              <dd>Re-orient between sections, print flat layers within each. Simpler in every way than simultaneous motion — and not conformal, whatever the brochure says.</dd>
+            </div>
+            <div class="term" id="simultaneous-interpolation">
+              <dt>Simultaneous interpolation</dt>
+              <dd>All axes moving together under one coordinated motion command, so orientation changes continuously while material is deposited. The motion mode true curved layers require.</dd>
+            </div>
+            <div class="term" id="stair-stepping">
+              <dt>Stair-stepping</dt>
+              <dd>The stepped finish flat layers leave on any curved surface. Thinner layers shrink the steps but never remove them; curved layers eliminate the cause rather than the symptom.</dd>
+            </div>
+            <div class="term" id="substrate-printing">
+              <dt>Substrate printing</dt>
+              <dd>Printing onto an existing object — printed, machined or moulded — instead of a flat bed, following its surface with multi-axis orientation. Enables repair, added features and personalisation.</dd>
+            </div>
+            <div class="term" id="self-supporting-angle">
+              <dt>Self-supporting angle</dt>
+              <dd>The steepest overhang a process can print without support. On a 3-axis machine it's roughly 45° from vertical; a 5-axis machine changes the angle itself by re-orienting the part, which is the whole trick.</dd>
+            </div>
+            <div class="term" id="orientation-field">
+              <dt>Orientation field</dt>
+              <dd>The assignment of a nozzle direction to every point of a non-planar toolpath — the core data a conformal slicer computes, and the thing flat slicers don't have at all.</dd>
+            </div>
+            <div class="term" id="singularity">
+              <dt>Singularity</dt>
+              <dd>A pose where a rotary axis must spin infinitely fast to maintain the path — a real failure mode of 5-axis toolpaths near vertical orientations, handled (or not) by the slicer and controller.</dd>
+            </div>
+          </dl>
+                  <div class="more-links">
+            <h2>Related pages</h2>
+            <ul>
+              <li><a href="/guides/what-counts-as-5-axis-printing/">Guide: What counts as 5-axis printing?</a></li>
+              <li><a href="/guides/non-planar-slicing-explained/">Guide: Non-planar slicing, explained</a></li>
+              <li><a href="/landscape/">The technology landscape</a></li>
+            </ul>
+          </div>
+</div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="/">5AXIS<b>3D</b></a>
+            <p>The knowledge hub for five-axis 3D printing — guides, landscape, glossary and research agenda — and a prototype conformal FDM platform: machines, custom builds and curved-surface slicing software, developed openly with research institutes, universities and advanced makers since 2022.</p>
+          </div>
+          <div>
+            <h4>Knowledge hub</h4>
+            <ul>
+              <li><a href="/guides/">Guides</a></li>
+              <li><a href="/landscape/">Technology landscape</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/research/">Research agenda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/#why">Why conformal</a></li>
+              <li><a href="/platform/">The platform</a></li>
+              <li><a href="/platform/#control">Control &amp; software</a></li>
+              <li><a href="/platform/#who">Who it's for</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Join in</h4>
+            <ul>
+              <li><a href="/platform/#who">Who it's for</a></li>
+              <li><a href="/platform/#process">How it works</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="mailto:cqq365@gmail.com">cqq365@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="foot-links" aria-label="Trust and site information"><a href="/about/">About</a><a href="/editorial/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a></nav>
+          <div class="legal">
+          <span>© 2026 5axis3d.com · Suzhou, China</span>
+          <span>Prototype-stage platform — every build is configured per project.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c2fc9bc804c64eb2a7efbc5bad7865f3"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
