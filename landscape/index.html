@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>5-Axis Printing Technology Landscape — Six Routes Mapped</title>
+    <meta name="description" content="The 5-axis 3D printing landscape on one page: six routes compared — strengths, limits, maturity — plus the projects pursuing each. November 2026 snapshot." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://5axis3d.com/landscape/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="5axis3d.com" />
+    <meta property="og:title" content="5-Axis Printing Technology Landscape — Six Routes Mapped" />
+    <meta property="og:description" content="The 5-axis 3D printing landscape on one page: six routes compared — strengths, limits, maturity — plus the projects pursuing each. November 2026 snapshot." />
+    <meta property="og:url" content="https://5axis3d.com/landscape/" />
+    <meta property="og:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5-Axis Printing Technology Landscape — Six Routes Mapped" />
+    <meta name="twitter:description" content="The 5-axis 3D printing landscape on one page: six routes compared — strengths, limits, maturity — plus the projects pursuing each. November 2026 snapshot." />
+    <meta name="twitter:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://5axis3d.com/#org",
+      "name": "5axis3d.com",
+      "url": "https://5axis3d.com/",
+      "email": "cqq365@gmail.com",
+      "description": "The knowledge hub for five-axis 3D printing — guides, technology landscape, glossary and open research agenda for conformal (non-planar) FDM printing — and developers of a prototype-stage 5-axis printer platform, custom machines and curved-surface slicing software, developed with research institutes and universities since 2022.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suzhou",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "cqq365@gmail.com",
+        "availableLanguage": [
+          "English"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://5axis3d.com/#site",
+      "url": "https://5axis3d.com/",
+      "name": "5axis3d.com",
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://5axis3d.com/landscape/#webpage",
+      "url": "https://5axis3d.com/landscape/",
+      "name": "5-Axis Printing Technology Landscape — Six Routes Mapped",
+      "description": "The 5-axis 3D printing landscape on one page: six routes compared — strengths, limits, maturity — plus the projects pursuing each. November 2026 snapshot.",
+      "isPartOf": {
+        "@id": "https://5axis3d.com/#site"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "ItemList",
+      "name": "Routes to multi-axis 3D printing",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Tilt–rotate table (trunnion) FDM",
+          "url": "https://5axis3d.com/landscape/#route-trunnion-table"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tilting / swivelling print head",
+          "url": "https://5axis3d.com/landscape/#route-tilting-head"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "3+2 indexed printing",
+          "url": "https://5axis3d.com/landscape/#route-3-plus-2-indexed"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Belt & continuous-axis printing",
+          "url": "https://5axis3d.com/landscape/#route-belt-printing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Robotic-arm extrusion",
+          "url": "https://5axis3d.com/landscape/#route-robotic-arm"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "5-axis hybrid: print + CNC mill",
+          "url": "https://5axis3d.com/landscape/#route-print-mill-hybrid"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How many routes are there to multi-axis 3D printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Six serious ones: tilt–rotate (trunnion) tables, tilting print heads, 3+2 indexing, belt and continuous-axis printing, robotic-arm extrusion, and 5-axis print-and-mill hybrids. They differ in orientation freedom, stiffness, usable volume, cost and maturity."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which routes can I buy commercially today?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Belt printers are established commercial products, and robotic-arm cells and hybrid machines are early commercial offerings aimed at industrial users. True conformal routes — trunnion tables and tilting heads — remain research projects and early, built-to-order machines, including our own prototype platform."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this landscape complete?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No — and it says so on purpose. It is a snapshot of the field as of November 2026, maintained as a public reference and corrected through contributions. If a route or project is missing, that is a bug in this page, and the contribution path is how it gets fixed."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://5axis3d.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Technology landscape",
+          "item": "https://5axis3d.com/landscape/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body data-page="landscape">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="/">5AXIS<b>3D</b></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">Menu</button>
+        <nav class="main" id="main-nav" aria-label="Main">
+          <a href="/guides/" data-spy="guides">Knowledge hub</a>
+          <a href="/landscape/" data-spy="landscape">Landscape</a>
+          <a href="/glossary/" data-spy="glossary">Glossary</a>
+          <a href="/platform/" data-spy="platform">The platform</a>
+          <a href="/research/" data-spy="research">Research agenda</a>
+          <a href="/faq/" data-spy="faq">FAQ</a>
+        </nav>
+        <a class="btn small header-cta" href="/contact/">Talk to us</a>
+      </div>
+    </header>
+    <main id="top">
+<section class="section" id="topics">
+        <div class="wrap">
+          <p class="crumbs"><a href="/">Home</a> · Technology landscape</p>
+          <div class="sec-head">
+            <span class="tag">Technology landscape</span>
+            <h1 class="page-title">Every serious route to printing in more than three axes, on one map.</h1>
+            <p class="lede">A field becomes navigable when its options are named and compared honestly. This map is maintained as a public reference: routes, trade-offs, maturity — and the projects pursuing each route. It is deliberately incomplete, and it improves through <a href="/contact/">contributions</a>.</p>
+          </div>
+
+                    <div class="note tldr">
+            <h2>In short</h2>
+            <p>There are six serious routes to printing in more than three axes: tilt–rotate (trunnion) tables and tilting heads — the two routes to true conformal, non-planar layers; 3+2 indexing, which re-orients between flat-layer sections; belt printers, which add one endless fixed-angle axis; robotic-arm extrusion for metre scale; and 5-axis print-and-mill hybrids. They trade usable volume, stiffness, accuracy, cost and maturity against each other, and no route wins on all five. This page compares them side by side and lists the projects pursuing each — a November 2026 snapshot that is openly incomplete.</p>
+          </div>
+          <div class="route" id="route-trunnion-table">
+            <div>
+              <h2>Tilt–rotate table (trunnion) FDM</h2>
+              <span class="route-tag">Route 1 · True conformal</span>
+            </div>
+            <p>The part rides a table that tilts and rotates beneath a conventional 3-axis gantry, so the surface being printed is always presented to the nozzle at the right angle. <b>Strengths:</b> stiff, compact, genuinely simultaneous 5-axis motion; the extruder stays upright, so filament feeding behaves normally.</p>
+            <div>
+              <p><b>Limits:</b> the usable volume shrinks as the table tilts; tall parts swing through a large envelope; collision checking between part, table and gantry is mandatory.</p>
+              <p class="status-line"><span class="status ours">● Our platform's route</span> <span class="status">Research + early builds</span></p>
+            </div>
+          </div>
+
+          <div class="route" id="route-tilting-head">
+            <div>
+              <h2>Tilting / swivelling print head</h2>
+              <span class="route-tag">Route 2 · True conformal</span>
+            </div>
+            <p>The rotary axes live in a wrist at the nozzle, which leans to stay normal to the surface while the part sits still. <b>Strengths:</b> works over a full-size flat bed; large parts don't move; natural fit for printing onto big stationary substrates.</p>
+            <div>
+              <p><b>Limits:</b> the head itself becomes the collision problem — hotend, fans and cabling sweep a wide cone; extruders fed at steep angles behave badly; wrist stiffness limits speed and quality.</p>
+              <p class="status-line"><span class="status">Research</span></p>
+            </div>
+          </div>
+
+          <div class="route" id="route-3-plus-2-indexed">
+            <div>
+              <h2>3+2 indexed printing</h2>
+              <span class="route-tag">Route 3 · Indexed</span>
+            </div>
+            <p>Re-orient the part between sections; print each section with ordinary flat layers. <b>Strengths:</b> by far the simplest control and slicing of any multi-axis route; reaches faces a 3-axis machine can't; reduces supports substantially.</p>
+            <div>
+              <p><b>Limits:</b> layers are still flat within each section, so <a href="/glossary/#stair-stepping">stair-stepping</a> remains; seams and registration errors appear where orientations meet; not <a href="/glossary/#conformal-printing">conformal printing</a>, despite frequent marketing to the contrary.</p>
+              <p class="status-line"><span class="status">Research · niche tools</span></p>
+            </div>
+          </div>
+
+          <div class="route" id="route-belt-printing">
+            <div>
+              <h2>Belt &amp; continuous-axis printing</h2>
+              <span class="route-tag">Route 4 · One extra axis</span>
+            </div>
+            <p>A conveyor-belt bed (or a continuously rotating fixture) prints at a fixed 45°-style angle, giving an effectively infinite axis for very long parts and natural support-free overhangs in one direction. <b>Strengths:</b> commercially available, affordable, excellent for long profiles and batch production of identical parts.</p>
+            <div>
+              <p><b>Limits:</b> a single fixed orientation — no second rotary axis, no surface-following layers. An adjacent technology to 5-axis printing, not a subset of it.</p>
+              <p class="status-line"><span class="status">Commercial niche</span></p>
+            </div>
+          </div>
+
+          <div class="route" id="route-robotic-arm">
+            <div>
+              <h2>Robotic-arm extrusion</h2>
+              <span class="route-tag">Route 5 · Large scale</span>
+            </div>
+            <p>An industrial robot arm (six or more degrees of freedom) carries an extruder, often pellet-fed, over metre-scale parts. <b>Strengths:</b> unmatched reach and orientation freedom; prints furniture-, boat- and building-scale geometry; non-planar toolpaths at architectural scale.</p>
+            <div>
+              <p><b>Limits:</b> arm stiffness and path accuracy are far below gantry machines; cost, cell footprint and safety requirements exclude most labs; fine conformal detail is not its game.</p>
+              <p class="status-line"><span class="status">Early commercial · large format</span></p>
+            </div>
+          </div>
+
+          <div class="route" id="route-print-mill-hybrid">
+            <div>
+              <h2>5-axis hybrid: print + CNC mill</h2>
+              <span class="route-tag">Route 6 · Hybrid</span>
+            </div>
+            <p>One machine deposits material with multi-axis motion, then machines it to tolerance in the same setup. <b>Strengths:</b> the only route that pairs conformal geometry with machined surface finish and accuracy; powerful for tooling and end-use metal-adjacent workflows.</p>
+            <div>
+              <p><b>Limits:</b> highest cost and complexity on this map; two process disciplines to master; mostly aimed at industrial users rather than research exploration.</p>
+              <p class="status-line"><span class="status">Early commercial · industrial</span></p>
+            </div>
+          </div>
+
+          <div class="players">
+            <h2>Projects &amp; players worth knowing</h2>
+            <p class="intro">A snapshot of the field as of November 2026, across academia, open source and industry. Inclusion is informational, not endorsement — and the list is openly incomplete. Missing someone? <a href="/contact/">Tell us.</a></p>
+            <div class="player">
+              <div class="pname">Open5x<span>Imperial College London · open source</span></div>
+              <p>An open-source tilt–rotate hardware add-on that converts a conventional desktop printer into a 5-axis machine, with non-planar slicing built on Rhino/Grasshopper. The reference point for the DIY-and-research end of Route 1, and proof that the retrofit path is real — controller and slicer included.</p>
+            </div>
+            <div class="player">
+              <div class="pname">5AxisMaker<span>London · desktop hybrid</span></div>
+              <p>One of the earliest desktop machines to combine 5-axis CNC milling and 3D printing in a single unit — an early commercial attempt at Route 6, years before "hybrid" became a category.</p>
+            </div>
+            <div class="player">
+              <div class="pname">Ai Build<span>London · robotic cells</span></div>
+              <p>Large-format robotic printing cells and the software to drive them — a well-known name on Route 5, focused on industrial and architectural-scale parts.</p>
+            </div>
+            <div class="player">
+              <div class="pname">Branch Technology<span>USA · construction scale</span></div>
+              <p>Robotic "cellular fabrication": freeform lattice structures printed with arms and assembled into architectural walls — Route 5 pushed to building scale.</p>
+            </div>
+            <div class="player">
+              <div class="pname">Blackbelt &amp; Creality CR-30<span>Belt printing · commercial</span></div>
+              <p>The machines that made Route 4 real products: conveyor-bed printers for infinite-length parts, widely used for batch profiles — and the most common source of "isn't that 5-axis?" confusion this page exists to clear up.</p>
+            </div>
+            <div class="player">
+              <div class="pname">University research groups<span>Worldwide · slicing &amp; motion</span></div>
+              <p>Much of the field's slicing theory — <a href="/glossary/#orientation-field">orientation field</a>s, collision-free non-planar path generation, multi-axis process planning — comes from university groups publishing papers and prototypes rather than products. Our own slicer work with institute and university partners since 2022 sits in this tradition.</p>
+            </div>
+          </div>
+                  <div class="qa-sec">
+            <h2>Questions this page answers</h2>
+            <div class="faq-list">
+              <details class="faq">
+                <summary>How many routes are there to multi-axis 3D printing?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>Six serious ones: tilt–rotate (trunnion) tables, tilting print heads, 3+2 indexing, belt and continuous-axis printing, robotic-arm extrusion, and 5-axis print-and-mill hybrids. They differ in orientation freedom, stiffness, usable volume, cost and maturity.</p></div>
+              </details>
+              <details class="faq">
+                <summary>Which routes can I buy commercially today?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>Belt printers are established commercial products, and robotic-arm cells and hybrid machines are early commercial offerings aimed at industrial users. True conformal routes — trunnion tables and tilting heads — remain research projects and early, built-to-order machines, including our own prototype platform.</p></div>
+              </details>
+              <details class="faq">
+                <summary>Is this landscape complete?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>No — and it says so on purpose. It is a snapshot of the field as of November 2026, maintained as a public reference and corrected through contributions. If a route or project is missing, that is a bug in this page, and the contribution path is how it gets fixed.</p></div>
+              </details>
+            </div>
+          </div>
+<p class="last-updated">Last updated: November 2026</p>
+          <div class="more-links">
+            <h2>Related pages</h2>
+            <ul>
+              <li><a href="/guides/reading-the-landscape/">Guide: Reading the landscape — six routes to multi-axis</a></li>
+              <li><a href="/glossary/">Glossary — the field's terms, defined</a></li>
+              <li><a href="/platform/">Our platform: the trunnion-table route, built</a></li>
+              <li><a href="/contact/">Contribute a correction or a missing project</a></li>
+            </ul>
+          </div>
+</div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="/">5AXIS<b>3D</b></a>
+            <p>The knowledge hub for five-axis 3D printing — guides, landscape, glossary and research agenda — and a prototype conformal FDM platform: machines, custom builds and curved-surface slicing software, developed openly with research institutes, universities and advanced makers since 2022.</p>
+          </div>
+          <div>
+            <h4>Knowledge hub</h4>
+            <ul>
+              <li><a href="/guides/">Guides</a></li>
+              <li><a href="/landscape/">Technology landscape</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/research/">Research agenda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/#why">Why conformal</a></li>
+              <li><a href="/platform/">The platform</a></li>
+              <li><a href="/platform/#control">Control &amp; software</a></li>
+              <li><a href="/platform/#who">Who it's for</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Join in</h4>
+            <ul>
+              <li><a href="/platform/#who">Who it's for</a></li>
+              <li><a href="/platform/#process">How it works</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="mailto:cqq365@gmail.com">cqq365@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="foot-links" aria-label="Trust and site information"><a href="/about/">About</a><a href="/editorial/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a></nav>
+          <div class="legal">
+          <span>© 2026 5axis3d.com · Suzhou, China</span>
+          <span>Prototype-stage platform — every build is configured per project.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c2fc9bc804c64eb2a7efbc5bad7865f3"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
