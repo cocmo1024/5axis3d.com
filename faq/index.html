@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>5-Axis 3D Printing FAQ — Straight Answers</title>
+    <meta name="description" content="Answers about 5-axis conformal printing and our prototype platform: who it is for, build volume, materials, collaboration, pricing, 3+2 vs simultaneous." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://5axis3d.com/faq/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="5axis3d.com" />
+    <meta property="og:title" content="5-Axis 3D Printing FAQ — Straight Answers" />
+    <meta property="og:description" content="Answers about 5-axis conformal printing and our prototype platform: who it is for, build volume, materials, collaboration, pricing, 3+2 vs simultaneous." />
+    <meta property="og:url" content="https://5axis3d.com/faq/" />
+    <meta property="og:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5-Axis 3D Printing FAQ — Straight Answers" />
+    <meta name="twitter:description" content="Answers about 5-axis conformal printing and our prototype platform: who it is for, build volume, materials, collaboration, pricing, 3+2 vs simultaneous." />
+    <meta name="twitter:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://5axis3d.com/#org",
+      "name": "5axis3d.com",
+      "url": "https://5axis3d.com/",
+      "email": "cqq365@gmail.com",
+      "description": "The knowledge hub for five-axis 3D printing — guides, technology landscape, glossary and open research agenda for conformal (non-planar) FDM printing — and developers of a prototype-stage 5-axis printer platform, custom machines and curved-surface slicing software, developed with research institutes and universities since 2022.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suzhou",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "cqq365@gmail.com",
+        "availableLanguage": [
+          "English"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://5axis3d.com/#site",
+      "url": "https://5axis3d.com/",
+      "name": "5axis3d.com",
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://5axis3d.com/faq/#webpage",
+      "url": "https://5axis3d.com/faq/",
+      "name": "5-Axis 3D Printing FAQ — Straight Answers",
+      "description": "Answers about 5-axis conformal printing and our prototype platform: who it is for, build volume, materials, collaboration, pricing, 3+2 vs simultaneous.",
+      "isPartOf": {
+        "@id": "https://5axis3d.com/#site"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is conformal (non-planar) 5-axis 3D printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A conventional FDM printer stacks flat layers and can only move in X, Y and Z. A 5-axis machine adds rotary axes, so the nozzle stays normal to the surface being printed and the layers themselves curve to follow the part — that is conformal, or non-planar, printing. Overhangs and undercuts print without support structures, curved shells come out smooth instead of stair-stepped, and material is laid along the surface, where the loads run, instead of across flat slices."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a production-ready machine I can buy off the shelf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not yet — and we would rather say so plainly. The platform is at prototype stage: every machine is built to order, configured with the buyer, and still evolving. It is not a mass-produced, lights-out production printer, and it rewards users who are technically engaged. If you need certified fleet repeatability today, this is not the right purchase yet. If you want to research, teach or push non-planar printing — and shape the machine while you do — this is exactly the stage to join."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who is the machine for?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Research institutes and university labs working on non-planar printing, multi-axis motion or slicing algorithms; teaching labs that want students on real five-axis hardware; and advanced makers and small studios who have hit the limits of flat-layer printing. Typical projects include conformal printing research, curved composite shells, printing onto existing curved parts, and custom machine or slicer development with us."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How large a part can it print?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The current reference prototype is configured with axis travel of X 220 × Y 190 × Z 180 mm. The usable conformal volume is smaller than the travel box and depends on part geometry and tilt angles — send us your model and we will check it honestly. Custom builds can be specified with different travels."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which materials does it print?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is an FDM (FFF) platform, and the hotend and thermal configuration are set per build. Common requests are PLA, PETG, ABS/ASA, TPU and fibre-filled filaments; if your project needs a specific engineering material, tell us in your first message and we will confirm whether and how the machine should be configured for it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can we collaborate on the slicing software or a custom machine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes — that is a core part of what we do. Since 2022 we have worked with research institutes and universities on multi-axis linkage control, curved-surface slicing software and customised machines, and a custom five-axis unit has already been built and delivered to a university research lab. Joint development, slicer collaboration and one-off custom builds are all conversations we welcome."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you ship internationally, and what does a machine cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, machines are built to order in Suzhou, China and can be shipped internationally in protective crating, with setup support by video call. There is no list price: configuration — travels, hotend, sensors, software options — changes every build, so each machine is quoted individually after we understand your project. Tell us what you want to print or research and we will reply with a configuration proposal and a price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between 3+2 and simultaneous 5-axis printing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In 3+2 (indexed) printing, the part is tilted to a new fixed orientation, then printed with ordinary flat layers before being re-oriented again — the rotary axes move between sections, not during them. In simultaneous 5-axis printing, all axes interpolate together while material is deposited, so the nozzle orientation changes continuously and the layers themselves curve. 3+2 is much simpler to control and slice, and it helps with access and support reduction, but only simultaneous motion produces true conformal layers and smooth curved surfaces."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a normal slicer like Cura or PrusaSlicer generate 5-axis toolpaths?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Mainstream slicers assume flat, horizontal layers and three-axis motion; their output contains no rotary-axis moves and no toolpaths that follow a surface. Non-planar toolpaths require surface-based slicing — generating paths on the part's geometry, checking nozzle orientation and collisions in five axes — which is why dedicated curved-surface slicers, including ours and research tools such as the Open5x Grasshopper workflow, exist. This software gap, more than hardware, is what keeps 5-axis printing a research field today."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "5-axis printer, robotic arm or belt printer — which multi-axis route should I choose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "They solve different problems. A 5-axis FDM machine (tilt-rotate table or tilting head) is the route to true conformal layers on desktop-scale parts — the right choice for non-planar research. A robotic arm trades stiffness and accuracy for scale and freedom, and suits large-format work. A belt printer adds one continuous axis for very long parts printed at a fixed angle, but cannot re-orient in two rotary axes, so it is not conformal printing. Our technology landscape section compares the routes in detail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I retrofit a normal 3-axis printer into a 5-axis machine?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "As a research project, yes — the open-source Open5x project, for example, adds a tilt-rotate stage to a conventional printer. But the mechanics are the easy half: you also need a controller that interpolates five axes with tool-centre compensation (RTCP), and a slicer that can generate non-planar toolpaths at all. Most groups who price the full stack — mechanics, controller, software, calibration time — find a purpose-built platform the shorter path, which is why both routes appear in our landscape map."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "I found an error, or a project missing from the landscape — can I contribute?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please do. This site is maintained as a reference for the whole field, not just as our product page. Use the contact form, choose “Contribute to the hub”, and send the correction, paper, project or resource — with a link. Substantive contributions are credited on the page."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://5axis3d.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://5axis3d.com/faq/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body data-page="faq">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="/">5AXIS<b>3D</b></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">Menu</button>
+        <nav class="main" id="main-nav" aria-label="Main">
+          <a href="/guides/" data-spy="guides">Knowledge hub</a>
+          <a href="/landscape/" data-spy="landscape">Landscape</a>
+          <a href="/glossary/" data-spy="glossary">Glossary</a>
+          <a href="/platform/" data-spy="platform">The platform</a>
+          <a href="/research/" data-spy="research">Research agenda</a>
+          <a href="/faq/" data-spy="faq">FAQ</a>
+        </nav>
+        <a class="btn small header-cta" href="/contact/">Talk to us</a>
+      </div>
+    </header>
+    <main id="top">
+<section class="section" id="faq">
+        <div class="wrap">
+          <p class="crumbs"><a href="/">Home</a> · FAQ</p>
+          <div class="sec-head">
+            <span class="tag">FAQ</span>
+            <h1 class="page-title">Straight answers, including the uncomfortable ones.</h1>
+          </div>
+          <div class="faq-list">
+            <details class="faq">
+              <summary>What is conformal (non-planar) 5-axis 3D printing?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>A conventional FDM printer stacks flat layers and can only move in X, Y and Z. A 5-axis machine adds rotary axes, so the nozzle stays normal to the surface being printed and the layers themselves curve to follow the part — that is conformal, or non-planar, printing. Overhangs and undercuts print without support structures, curved shells come out smooth instead of stair-stepped, and material is laid along the surface, where the loads run, instead of across flat slices.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Is this a production-ready machine I can buy off the shelf?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>Not yet — and we would rather say so plainly. The platform is at prototype stage: every machine is built to order, configured with the buyer, and still evolving. It is not a mass-produced, lights-out production printer, and it rewards users who are technically engaged. If you need certified fleet repeatability today, this is not the right purchase yet. If you want to research, teach or push non-planar printing — and shape the machine while you do — this is exactly the stage to join.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Who is the machine for?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>Research institutes and university labs working on non-planar printing, multi-axis motion or slicing algorithms; teaching labs that want students on real five-axis hardware; and advanced makers and small studios who have hit the limits of flat-layer printing. Typical projects include conformal printing research, curved composite shells, printing onto existing curved parts, and custom machine or slicer development with us.</p></div>
+            </details>
+            <details class="faq">
+              <summary>How large a part can it print?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>The current reference prototype is configured with axis travel of X 220 × Y 190 × Z 180 mm. The usable conformal volume is smaller than the travel box and depends on part geometry and tilt angles — send us your model and we will check it honestly. Custom builds can be specified with different travels.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Which materials does it print?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>It is an FDM (FFF) platform, and the hotend and thermal configuration are set per build. Common requests are PLA, PETG, ABS/ASA, TPU and fibre-filled filaments; if your project needs a specific engineering material, tell us in your first message and we will confirm whether and how the machine should be configured for it.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Can we collaborate on the slicing software or a custom machine?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>Yes — that is a core part of what we do. Since 2022 we have worked with research institutes and universities on multi-axis linkage control, curved-surface slicing software and customised machines, and a custom five-axis unit has already been built and delivered to a university research lab. Joint development, slicer collaboration and one-off custom builds are all conversations we welcome.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Do you ship internationally, and what does a machine cost?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>Yes, machines are built to order in Suzhou, China and can be shipped internationally in protective crating, with setup support by video call. There is no list price: configuration — travels, hotend, sensors, software options — changes every build, so each machine is quoted individually after we understand your project. Tell us what you want to print or research and we will reply with a configuration proposal and a price.</p></div>
+            </details>
+            <details class="faq">
+              <summary>What is the difference between 3+2 and simultaneous 5-axis printing?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>In 3+2 (indexed) printing, the part is tilted to a new fixed orientation, then printed with ordinary flat layers before being re-oriented again — the rotary axes move between sections, not during them. In simultaneous 5-axis printing, all axes interpolate together while material is deposited, so the nozzle orientation changes continuously and the layers themselves curve. 3+2 is much simpler to control and slice, and it helps with access and support reduction, but only simultaneous motion produces true conformal layers and smooth curved surfaces.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Can a normal slicer like Cura or PrusaSlicer generate 5-axis toolpaths?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>No. Mainstream slicers assume flat, horizontal layers and three-axis motion; their output contains no rotary-axis moves and no toolpaths that follow a surface. Non-planar toolpaths require surface-based slicing — generating paths on the part's geometry, checking nozzle orientation and collisions in five axes — which is why dedicated curved-surface slicers, including ours and research tools such as the Open5x Grasshopper workflow, exist. This software gap, more than hardware, is what keeps 5-axis printing a research field today.</p></div>
+            </details>
+            <details class="faq">
+              <summary>5-axis printer, robotic arm or belt printer — which route should I choose?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>They solve different problems. A 5-axis FDM machine (tilt-rotate table or tilting head) is the route to true conformal layers on desktop-scale parts — the right choice for non-planar research. A robotic arm trades stiffness and accuracy for scale and freedom, and suits large-format work. A belt printer adds one continuous axis for very long parts printed at a fixed angle, but cannot re-orient in two rotary axes, so it is not conformal printing. Our <a href="/landscape/">technology landscape</a> compares the routes in detail.</p></div>
+            </details>
+            <details class="faq">
+              <summary>Can I retrofit a normal 3-axis printer into a 5-axis machine?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>As a research project, yes — the open-source Open5x project, for example, adds a tilt-rotate stage to a conventional printer. But the mechanics are the easy half: you also need a controller that interpolates five axes with tool-centre compensation (RTCP), and a slicer that can generate non-planar toolpaths at all. Most groups who price the full stack — mechanics, controller, software, calibration time — find a purpose-built platform the shorter path, which is why both routes appear in our landscape map.</p></div>
+            </details>
+            <details class="faq">
+              <summary>I found an error, or a project missing from the landscape — can I contribute?<span class="chev" aria-hidden="true">+</span></summary>
+              <div class="a"><p>Please do. This site is maintained as a reference for the whole field, not just as our product page. Use the contact form below, choose “Contribute to the hub”, and send the correction, paper, project or resource — with a link. Substantive contributions are credited on the page.</p></div>
+            </details>
+          </div>
+                  <div class="more-links">
+            <h2>Related pages</h2>
+            <ul>
+              <li><a href="/guides/what-counts-as-5-axis-printing/">Guide: What counts as 5-axis printing?</a></li>
+              <li><a href="/landscape/">The technology landscape — routes compared</a></li>
+              <li><a href="/platform/">The prototype platform</a></li>
+              <li><a href="/contact/">Ask a question we haven't answered</a></li>
+            </ul>
+          </div>
+</div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="/">5AXIS<b>3D</b></a>
+            <p>The knowledge hub for five-axis 3D printing — guides, landscape, glossary and research agenda — and a prototype conformal FDM platform: machines, custom builds and curved-surface slicing software, developed openly with research institutes, universities and advanced makers since 2022.</p>
+          </div>
+          <div>
+            <h4>Knowledge hub</h4>
+            <ul>
+              <li><a href="/guides/">Guides</a></li>
+              <li><a href="/landscape/">Technology landscape</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/research/">Research agenda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/#why">Why conformal</a></li>
+              <li><a href="/platform/">The platform</a></li>
+              <li><a href="/platform/#control">Control &amp; software</a></li>
+              <li><a href="/platform/#who">Who it's for</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Join in</h4>
+            <ul>
+              <li><a href="/platform/#who">Who it's for</a></li>
+              <li><a href="/platform/#process">How it works</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="mailto:cqq365@gmail.com">cqq365@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="foot-links" aria-label="Trust and site information"><a href="/about/">About</a><a href="/editorial/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a></nav>
+          <div class="legal">
+          <span>© 2026 5axis3d.com · Suzhou, China</span>
+          <span>Prototype-stage platform — every build is configured per project.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c2fc9bc804c64eb2a7efbc5bad7865f3"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
