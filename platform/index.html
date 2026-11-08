@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>5-Axis FDM Printer for Research — Prototype Platform</title>
+    <meta name="description" content="Prototype-stage 5-axis conformal FDM platform: POCENDER / PCD3D controller with RTCP, in-house curved-surface slicer, travel X 220 × Y 190 × Z 180 mm." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://5axis3d.com/platform/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="5axis3d.com" />
+    <meta property="og:title" content="5-Axis FDM Printer for Research — Prototype Platform" />
+    <meta property="og:description" content="Prototype-stage 5-axis conformal FDM platform: POCENDER / PCD3D controller with RTCP, in-house curved-surface slicer, travel X 220 × Y 190 × Z 180 mm." />
+    <meta property="og:url" content="https://5axis3d.com/platform/" />
+    <meta property="og:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5-Axis FDM Printer for Research — Prototype Platform" />
+    <meta name="twitter:description" content="Prototype-stage 5-axis conformal FDM platform: POCENDER / PCD3D controller with RTCP, in-house curved-surface slicer, travel X 220 × Y 190 × Z 180 mm." />
+    <meta name="twitter:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://5axis3d.com/#org",
+      "name": "5axis3d.com",
+      "url": "https://5axis3d.com/",
+      "email": "cqq365@gmail.com",
+      "description": "The knowledge hub for five-axis 3D printing — guides, technology landscape, glossary and open research agenda for conformal (non-planar) FDM printing — and developers of a prototype-stage 5-axis printer platform, custom machines and curved-surface slicing software, developed with research institutes and universities since 2022.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suzhou",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "cqq365@gmail.com",
+        "availableLanguage": [
+          "English"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://5axis3d.com/#site",
+      "url": "https://5axis3d.com/",
+      "name": "5axis3d.com",
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://5axis3d.com/platform/#webpage",
+      "url": "https://5axis3d.com/platform/",
+      "name": "5-Axis FDM Printer for Research — Prototype Platform",
+      "description": "Prototype-stage 5-axis conformal FDM platform: POCENDER / PCD3D controller with RTCP, in-house curved-surface slicer, travel X 220 × Y 190 × Z 180 mm.",
+      "isPartOf": {
+        "@id": "https://5axis3d.com/#site"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Product",
+      "name": "5-Axis Conformal FDM 3D Printer (prototype, built to order)",
+      "description": "Enclosed benchtop five-axis FDM 3D printer for conformal, non-planar printing. X/Y/Z linear axes plus A/B/C rotary axes under a POCENDER / PCD3D multi-axis controller with RTCP, paired with in-house curved-surface slicing software. Reference prototype travel: X 220 × Y 190 × Z 180 mm. Machines are built to order and configured per project; options include AI-assisted print simulation, in-process self-inspection with compensation, and remote operation.",
+      "brand": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "category": "5-axis FDM 3D printer",
+      "url": "https://5axis3d.com/platform/",
+      "image": "https://5axis3d.com/assets/illus-layers.webp"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://5axis3d.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "The prototype platform",
+          "item": "https://5axis3d.com/platform/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body data-page="platform">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="/">5AXIS<b>3D</b></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">Menu</button>
+        <nav class="main" id="main-nav" aria-label="Main">
+          <a href="/guides/" data-spy="guides">Knowledge hub</a>
+          <a href="/landscape/" data-spy="landscape">Landscape</a>
+          <a href="/glossary/" data-spy="glossary">Glossary</a>
+          <a href="/platform/" data-spy="platform">The platform</a>
+          <a href="/research/" data-spy="research">Research agenda</a>
+          <a href="/faq/" data-spy="faq">FAQ</a>
+        </nav>
+        <a class="btn small header-cta" href="/contact/">Talk to us</a>
+      </div>
+    </header>
+    <main id="top">
+<section class="section" id="machine">
+        <div class="wrap">
+          <p class="crumbs"><a href="/">Home</a> · The prototype platform</p>
+          <div class="sec-head">
+            <span class="tag">Our platform</span>
+            <h1 class="page-title">One working prototype, configured per project — not a catalogue model.</h1>
+            <p class="lede">The machine below is our current prototype: a fully enclosed benchtop unit with a tilting build stage, touchscreen control and our own multi-axis controller and slicer. There is no fixed catalogue configuration — every unit is built to order, and travels, hotend, sensors and software options are agreed with the buyer before we build.</p>
+          </div>
+
+          <article class="machine flagship">
+            <figure>
+              <img src="/assets/illus-layers.webp" alt="Illustration of a printer nozzle laying smooth curved layers over a dome-shaped part on a rotating build plate" width="1920" height="1280" loading="lazy" />
+            </figure>
+            <div class="body">
+              <div class="model">Current prototype · Reference configuration</div>
+              <h3>Benchtop 5-Axis Conformal FDM Printer</h3>
+              <p class="pos">Built for labs and serious workshops: an enclosed machine that prints true non-planar toolpaths with simultaneous five-axis motion, driven by our POCENDER / PCD3D controller and curved-surface slicing software.</p>
+              <dl class="specs">
+                <div class="row"><dt>Process</dt><dd>FDM / FFF with conformal (non-planar) slicing</dd></div>
+                <div class="row"><dt>Motion</dt><dd>X / Y / Z linear + A / B / C rotary axes, simultaneous interpolation</dd></div>
+                <div class="row"><dt>Axis travel</dt><dd>X 220 × Y 190 × Z 180 mm (reference prototype)</dd></div>
+                <div class="row"><dt>Tool-centre control</dt><dd>RTCP — nozzle stays on path while axes re-orient</dd></div>
+                <div class="row"><dt>Controller</dt><dd>POCENDER / PCD3D multi-axis controller, touchscreen + web panel</dd></div>
+                <div class="row"><dt>Software</dt><dd>Curved-surface (conformal) slicer, developed in-house</dd></div>
+                <div class="row"><dt>Options</dt><dd>AI-assisted print simulation · self-inspection with compensation · remote operation</dd></div>
+                <div class="row"><dt>Format</dt><dd>Fully enclosed benchtop cabinet</dd></div>
+              </dl>
+              <button class="btn" type="button" data-quote="Prototype machine">Ask about a machine</button>
+            </div>
+          </article>
+
+          <p class="spec-note">Travel figures are the reference prototype's controller configuration; usable conformal volume depends on part geometry and tilt angles. Final specification of any unit is confirmed in writing before build — if your project needs different travels or sensors, that is a configuration conversation, not a problem.</p>
+
+          <div class="sec-head" style="margin-top:64px;">
+            <h2>Three ways to work with us</h2>
+          </div>
+          <div class="steps three">
+            <div class="step">
+              <div class="n">PATH 1</div>
+              <h3>Get a prototype machine</h3>
+              <p>One of the current-generation machines for your lab or workshop, configured for your materials and projects, with direct access to the people who built it as the platform evolves.</p>
+              <button class="btn ghost-l" type="button" data-quote="Prototype machine">Start with your project</button>
+            </div>
+            <div class="step">
+              <div class="n">PATH 2</div>
+              <h3>Commission a custom build</h3>
+              <p>A machine specified around your research or application — different travels, sensing, hotend or software features. A custom five-axis unit has already been built and delivered to a university research lab this way.</p>
+              <button class="btn ghost-l" type="button" data-quote="Custom build">Describe your application</button>
+            </div>
+            <div class="step">
+              <div class="n">PATH 3</div>
+              <h3>Develop it with us</h3>
+              <p>Joint development of multi-axis control, conformal slicing or a machine variant — the collaboration model we've worked under with research institutes and universities since 2022.</p>
+              <button class="btn ghost-l" type="button" data-quote="Joint development / slicer collaboration">Propose a collaboration</button>
+            </div>
+          </div>
+        </div>
+      </section>
+<section class="section" id="control">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="tag">Control &amp; software</span>
+            <h2>The hard part isn't the frame. It's six axes moving as one, and a slicer that thinks in surfaces.</h2>
+            <p class="lede">Five-axis printing fails or succeeds in the control stack. Ours pairs a multi-axis controller with RTCP — the tool centre point stays exactly on the programmed path while the machine re-orients around it — with our own curved-surface slicing software, developed alongside the hardware since 2022.</p>
+          </div>
+          <div class="tech-grid">
+            <article class="tech-card">
+              <img src="/assets/illus-kinematics.webp" alt="Blueprint-style illustration of five-axis kinematics: a gantry print head above a tilting, rotating trunnion table, with curved arrows showing the rotary axes" width="1920" height="1280" loading="lazy" />
+              <div class="body">
+                <h3>Real multi-axis control, with RTCP</h3>
+                <p>Six axes — X, Y, Z plus the A, B and C rotary axes — interpolate simultaneously under the POCENDER / PCD3D controller, with RTCP (rotation tool centre point) keeping the nozzle tip exactly on the programmed path while the machine re-orients around it. Without RTCP, tilting the part drags the nozzle off its path; with it, conformal toolpaths stay true.</p>
+                <ul>
+                  <li>Simultaneous interpolation across linear and rotary axes</li>
+                  <li>Touchscreen control on the machine</li>
+                  <li>Per-axis travel, speed and acceleration parameters</li>
+                </ul>
+              </div>
+            </article>
+            <article class="tech-card">
+              <img src="/assets/illus-toolpath.webp" alt="Abstract illustration of curved toolpath lines in amber and teal flowing over a dome surface, with a small nozzle following one curve" width="1920" height="1280" loading="lazy" />
+              <div class="body">
+                <h3>A slicer that thinks in surfaces — and remote operation</h3>
+                <p>Our slicing software generates toolpaths on the part's surfaces instead of in flat planes — the software half of conformal printing, and an active research topic in its own right. The machine itself runs from a touchscreen or remotely through the POCENDER web panel: jog every axis, manage files, update firmware and monitor status from a phone or laptop. On custom builds, the stack extends further:</p>
+                <ul>
+                  <li>AI-assisted simulation of the print before it runs</li>
+                  <li>In-process self-inspection with automatic compensation</li>
+                  <li>Full remote control for shared and teaching labs</li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <table class="compare">
+            <caption>Flat-layer 3-axis vs. conformal 5-axis printing</caption>
+            <thead>
+              <tr><th scope="col">Question</th><th scope="col">3-axis FDM printer</th><th scope="col">5-axis conformal machine</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Overhangs</td><td>Support structures below ~45°, removed afterwards</td><td><b>Tilt the part and print support-free</b>, including undercuts</td></tr>
+              <tr><td>Layer shape</td><td>Flat slices; stair-stepping on every curve</td><td><b>Layers follow the surface</b>; smooth, stronger shells</td></tr>
+              <tr><td>Layer strength</td><td>Weak across flat layer lines</td><td><b>Material laid along the surface</b> and the load path</td></tr>
+              <tr><td>Existing parts</td><td>Print only on a flat bed, from above</td><td><b>Print onto curved substrates</b> and existing objects</td></tr>
+              <tr><td>Typical fit</td><td>Prismatic parts, simple brackets</td><td><b>Curved shells, ducts, wearables, conformal research</b></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+<section class="section" id="who">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="tag">Who it's for</span>
+            <h2>An exploration, open to the people equipped to explore it.</h2>
+            <p class="lede">Conformal printing is not a settled technology — the slicing theory, the motion strategies and the applications are all still being worked out, in public, by a small worldwide community. This platform exists for the people doing that work.</p>
+          </div>
+          <div class="why-grid">
+            <div class="why-item">
+              <div class="num">R1</div>
+              <div>
+                <h3>Research institutes &amp; university labs</h3>
+                <p>Groups working on non-planar slicing, multi-axis motion, materials behaviour on curved layers, or conformal applications — who need real five-axis hardware to run experiments on, not just simulations. Joint development and slicer collaboration are how we've worked with institutes and universities since 2022.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="num">R2</div>
+              <div>
+                <h3>Teaching labs</h3>
+                <p>Five-axis machining is standard curriculum; five-axis printing is not — yet. A benchtop machine with an open control stack gives students genuine multi-axis, RTCP and non-planar toolpath concepts on hardware they can see, measure and modify.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="num">R3</div>
+              <div>
+                <h3>Advanced makers &amp; small studios</h3>
+                <p>Experienced builders who have hit the wall of flat-layer printing — support scars on every curve, weak shells, impossible undercuts — and want to experiment with the technology the community itself voted the next core direction of FDM.</p>
+              </div>
+            </div>
+            <div class="why-item">
+              <div class="num">R4</div>
+              <div>
+                <h3>Application pioneers</h3>
+                <p>Teams exploring where conformal printing wins first: printing onto existing objects, curved functional surfaces, wearables and prosthetics, aerodynamic and fluid shells. If your application needs a machine variant that doesn't exist yet, that's a custom-build conversation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="note">
+            <h3>Where we honestly are</h3>
+            <p><b>This is a prototype platform, not a production product.</b> Machines are built one at a time, to order, and the design is still evolving — you will find rough edges, and current builds are not yet at production-level repeatability or polish. We don't publish a catalogue price, a fixed lead time or fleet-support promises, because at this stage those numbers wouldn't be honest.</p>
+            <p>What you get instead: direct access to the engineers, a machine configured for your questions, and a say in where the platform goes next. The labs and makers who join at this stage are the ones shaping what five-axis conformal printing becomes.</p>
+          </div>
+        </div>
+      </section>
+<section class="section" id="process">
+        <div class="wrap">
+          <div class="sec-head">
+            <span class="tag">How it works</span>
+            <h2>From first message to a machine on your bench.</h2>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="n">STEP 1</div>
+              <h3>Tell us the question</h3>
+              <p>What do you want to print, study or build? A model, a material, a research question — whatever you have. Honest scoping starts here.</p>
+            </div>
+            <div class="step">
+              <div class="n">STEP 2</div>
+              <h3>Talk it through</h3>
+              <p>A call with the engineers: is five-axis conformal the right tool, what configuration fits, and — just as important — what the prototype can and can't do yet.</p>
+            </div>
+            <div class="step">
+              <div class="n">STEP 3</div>
+              <h3>Build to order</h3>
+              <p>Your machine or collaboration is specified in writing, built, and tested against your own test geometry before it ships.</p>
+            </div>
+            <div class="step">
+              <div class="n">STEP 4</div>
+              <h3>Explore, with us in the loop</h3>
+              <p>Remote setup support, direct line to the developers, and your findings feeding the next iteration of the platform.</p>
+            </div>
+          </div>
+                  <div class="more-links">
+            <h2>Related pages</h2>
+            <ul>
+              <li><a href="/guides/starting-5-axis-research/">Guide: Starting 5-axis research — a practical checklist</a></li>
+              <li><a href="/research/">The open research agenda</a></li>
+              <li><a href="/contact/">Start a conversation about a machine or collaboration</a></li>
+              <li><a href="/faq/">FAQ — straight answers about the platform</a></li>
+            </ul>
+          </div>
+</div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="/">5AXIS<b>3D</b></a>
+            <p>The knowledge hub for five-axis 3D printing — guides, landscape, glossary and research agenda — and a prototype conformal FDM platform: machines, custom builds and curved-surface slicing software, developed openly with research institutes, universities and advanced makers since 2022.</p>
+          </div>
+          <div>
+            <h4>Knowledge hub</h4>
+            <ul>
+              <li><a href="/guides/">Guides</a></li>
+              <li><a href="/landscape/">Technology landscape</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/research/">Research agenda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/#why">Why conformal</a></li>
+              <li><a href="/platform/">The platform</a></li>
+              <li><a href="/platform/#control">Control &amp; software</a></li>
+              <li><a href="/platform/#who">Who it's for</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Join in</h4>
+            <ul>
+              <li><a href="/platform/#who">Who it's for</a></li>
+              <li><a href="/platform/#process">How it works</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="mailto:cqq365@gmail.com">cqq365@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="foot-links" aria-label="Trust and site information"><a href="/about/">About</a><a href="/editorial/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a></nav>
+          <div class="legal">
+          <span>© 2026 5axis3d.com · Suzhou, China</span>
+          <span>Prototype-stage platform — every build is configured per project.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c2fc9bc804c64eb2a7efbc5bad7865f3"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
