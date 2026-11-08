@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0b1013" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>5-Axis 3D Printing Research Setup — A Practical Checklist</title>
+    <meta name="description" content="Starting a 5-axis printing research programme: benchmark geometries to fix first, what to measure, how to budget for the slicer, and why to publish failures." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://5axis3d.com/guides/starting-5-axis-research/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="5axis3d.com" />
+    <meta property="og:title" content="5-Axis 3D Printing Research Setup — A Practical Checklist" />
+    <meta property="og:description" content="Starting a 5-axis printing research programme: benchmark geometries to fix first, what to measure, how to budget for the slicer, and why to publish failures." />
+    <meta property="og:url" content="https://5axis3d.com/guides/starting-5-axis-research/" />
+    <meta property="og:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="5-Axis 3D Printing Research Setup — A Practical Checklist" />
+    <meta name="twitter:description" content="Starting a 5-axis printing research programme: benchmark geometries to fix first, what to measure, how to budget for the slicer, and why to publish failures." />
+    <meta name="twitter:image" content="https://5axis3d.com/assets/illus-hero.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://5axis3d.com/#org",
+      "name": "5axis3d.com",
+      "url": "https://5axis3d.com/",
+      "email": "cqq365@gmail.com",
+      "description": "The knowledge hub for five-axis 3D printing — guides, technology landscape, glossary and open research agenda for conformal (non-planar) FDM printing — and developers of a prototype-stage 5-axis printer platform, custom machines and curved-surface slicing software, developed with research institutes and universities since 2022.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Suzhou",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "cqq365@gmail.com",
+        "availableLanguage": [
+          "English"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://5axis3d.com/#site",
+      "url": "https://5axis3d.com/",
+      "name": "5axis3d.com",
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://5axis3d.com/guides/starting-5-axis-research/#webpage",
+      "url": "https://5axis3d.com/guides/starting-5-axis-research/",
+      "name": "5-Axis 3D Printing Research Setup — A Practical Checklist",
+      "description": "Starting a 5-axis printing research programme: benchmark geometries to fix first, what to measure, how to budget for the slicer, and why to publish failures.",
+      "isPartOf": {
+        "@id": "https://5axis3d.com/#site"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "inLanguage": "en"
+    },
+    {
+      "@type": "TechArticle",
+      "headline": "Starting 5-axis research: a practical checklist",
+      "description": "Starting a 5-axis printing research programme: benchmark geometries to fix first, what to measure, how to budget for the slicer, and why to publish failures.",
+      "author": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "publisher": {
+        "@id": "https://5axis3d.com/#org"
+      },
+      "datePublished": "2026-11-08",
+      "dateModified": "2026-11-08",
+      "mainEntityOfPage": {
+        "@id": "https://5axis3d.com/guides/starting-5-axis-research/#webpage"
+      },
+      "inLanguage": "en",
+      "url": "https://5axis3d.com/guides/starting-5-axis-research/",
+      "image": "https://5axis3d.com/assets/illus-hero.webp"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What should a lab sort out first: the machine or the slicer?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Decide the slicer question first, and budget for both. A 5-axis machine without non-planar toolpaths prints nothing a 3-axis machine cannot; seats, development time or a collaboration agreement for slicing belong in the budget before hardware arrives."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which benchmark parts should a 5-axis lab print first?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Four geometries expose most of the truth: a dome for stair-stepping, a 70° overhang wall for support-free claims, a curved duct for internal access, and a print onto a curved substrate. Every route can be compared honestly on the same four parts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why publish failed prints and collision cases?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Because in a field this young, negative results are the scarcest resource. Collision cases, singularity behaviour and failed orientations save every other group months — and they are exactly the data most teams are tempted to hide."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://5axis3d.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Knowledge hub",
+          "item": "https://5axis3d.com/guides/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Starting 5-axis research: a practical checklist",
+          "item": "https://5axis3d.com/guides/starting-5-axis-research/"
+        }
+      ]
+    }
+  ]
+}
+    </script>
+  </head>
+  <body data-page="guides">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="/">5AXIS<b>3D</b></a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation menu">Menu</button>
+        <nav class="main" id="main-nav" aria-label="Main">
+          <a href="/guides/" data-spy="guides">Knowledge hub</a>
+          <a href="/landscape/" data-spy="landscape">Landscape</a>
+          <a href="/glossary/" data-spy="glossary">Glossary</a>
+          <a href="/platform/" data-spy="platform">The platform</a>
+          <a href="/research/" data-spy="research">Research agenda</a>
+          <a href="/faq/" data-spy="faq">FAQ</a>
+        </nav>
+        <a class="btn small header-cta" href="/contact/">Talk to us</a>
+      </div>
+    </header>
+    <main id="top">
+      <section class="section">
+        <div class="wrap">
+          <p class="crumbs"><a href="/">Home</a> · <a href="/guides/">Knowledge hub</a> · Starting 5-axis research: a practical checklist</p>
+          <div class="sec-head">
+            <span class="tag">Knowledge hub · Guide 04</span>
+            <h1 class="page-title">Starting 5-axis research: a practical checklist</h1>
+          </div>
+          <div class="note tldr">
+            <h2>In short</h2>
+            <p>Labs starting 5-axis 3D printing research save the most time by deciding four things before hardware arrives: benchmark geometries (a dome, a 70° overhang wall, a curved duct, a curved substrate), the measurements that make claims publishable, a real budget for slicing software or collaboration, and a plan to publish failures as well as results. Hardware without toolpaths is furniture: the slicer, not the frame, is the field's bottleneck.</p>
+          </div>
+          <article class="guide-card standalone" style="margin-top:30px;">
+<p>For labs setting up a non-planar programme, the questions that save the most time are asked before any hardware arrives:</p>
+              <ul>
+                <li><b>Fix your benchmark geometries first</b> — a dome (<a href="/glossary/#stair-stepping">stair-stepping</a>), a 70° overhang wall (support-free claim), a curved duct (internal access), a print onto a curved substrate. Every route can be compared on the same four parts.</li>
+                <li><b>Decide what you will measure</b> — surface roughness on curves, interlayer strength along vs. across conformal layers, dimensional error vs. tilt angle. Publishable claims need these numbers.</li>
+                <li><b>Budget for the slicer, not just the machine</b> — seats, development time or a collaboration agreement; hardware without toolpaths is furniture.</li>
+                <li><b>Plan to publish the failures</b> — collision cases, <a href="/glossary/#singularity">singularity</a> behaviour, failed orientations. In a field this young, negative results are the scarcest resource.</li>
+              </ul>
+          </article>
+          <div class="qa-sec">
+            <h2>Questions this page answers</h2>
+            <div class="faq-list">
+              <details class="faq">
+                <summary>What should a lab sort out first: the machine or the slicer?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>Decide the slicer question first, and budget for both. A 5-axis machine without non-planar toolpaths prints nothing a 3-axis machine cannot; seats, development time or a collaboration agreement for slicing belong in the budget before hardware arrives.</p></div>
+              </details>
+              <details class="faq">
+                <summary>Which benchmark parts should a 5-axis lab print first?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>Four geometries expose most of the truth: a dome for stair-stepping, a 70° overhang wall for support-free claims, a curved duct for internal access, and a print onto a curved substrate. Every route can be compared honestly on the same four parts.</p></div>
+              </details>
+              <details class="faq">
+                <summary>Why publish failed prints and collision cases?<span class="chev" aria-hidden="true">+</span></summary>
+                <div class="a"><p>Because in a field this young, negative results are the scarcest resource. Collision cases, singularity behaviour and failed orientations save every other group months — and they are exactly the data most teams are tempted to hide.</p></div>
+              </details>
+            </div>
+          </div>
+<p class="last-updated">Last updated: November 2026</p>
+          <div class="more-links">
+            <h2>Related pages</h2>
+            <ul>
+              <li><a href="/research/">The open research agenda — the field's standing problem list</a></li>
+              <li><a href="/platform/">The prototype platform your programme could run on</a></li>
+              <li><a href="/contact/">Talk to us about a research setup</a></li>
+              <li><a href="/guides/what-counts-as-5-axis-printing/">Guide: What counts as 5-axis printing?</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-grid">
+          <div class="foot-brand">
+            <a class="brand" href="/">5AXIS<b>3D</b></a>
+            <p>The knowledge hub for five-axis 3D printing — guides, landscape, glossary and research agenda — and a prototype conformal FDM platform: machines, custom builds and curved-surface slicing software, developed openly with research institutes, universities and advanced makers since 2022.</p>
+          </div>
+          <div>
+            <h4>Knowledge hub</h4>
+            <ul>
+              <li><a href="/guides/">Guides</a></li>
+              <li><a href="/landscape/">Technology landscape</a></li>
+              <li><a href="/glossary/">Glossary</a></li>
+              <li><a href="/research/">Research agenda</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="/#why">Why conformal</a></li>
+              <li><a href="/platform/">The platform</a></li>
+              <li><a href="/platform/#control">Control &amp; software</a></li>
+              <li><a href="/platform/#who">Who it's for</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Join in</h4>
+            <ul>
+              <li><a href="/platform/#who">Who it's for</a></li>
+              <li><a href="/platform/#process">How it works</a></li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li><a href="mailto:cqq365@gmail.com">cqq365@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+        <nav class="foot-links" aria-label="Trust and site information"><a href="/about/">About</a><a href="/editorial/">Editorial policy</a><a href="/privacy/">Privacy</a><a href="/terms/">Terms</a><a href="/sitemap/">Sitemap</a></nav>
+          <div class="legal">
+          <span>© 2026 5axis3d.com · Suzhou, China</span>
+          <span>Prototype-stage platform — every build is configured per project.</span>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/site.js" defer></script>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "c2fc9bc804c64eb2a7efbc5bad7865f3"}'></script><!-- End Cloudflare Web Analytics -->
+  </body>
+</html>
