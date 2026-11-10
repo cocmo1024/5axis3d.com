@@ -328,3 +328,9 @@ footer.site ul li a{ display:inline-block; padding:5px 0; }
 @media (max-width:400px){
   .stats{ grid-template-columns:1fr; }
 }
+
+/* ---- language switcher (ML-1) ---- */
+.lang-switch{ display:flex; gap:8px; flex-wrap:wrap; margin-top:26px; align-items:center; }
+.lang-switch a{ display:inline-flex; align-items:center; min-height:44px; padding:10px 14px; border:1px solid var(--line); border-radius:999px; font-size:14px; font-weight:600; color:var(--ink); text-decoration:none; }
+.lang-switch a:hover{ border-color:var(--accent); color:var(--accent); }
+.lang-switch a[aria-current="true"]{ border-color:var(--accent); color:var(--accent); }

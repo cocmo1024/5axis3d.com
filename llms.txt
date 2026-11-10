@@ -20,6 +20,15 @@
 
 - [The prototype platform](https://5axis3d.com/platform/): benchtop 5-axis conformal FDM printer (reference travel X 220 × Y 190 × Z 180 mm), POCENDER / PCD3D controller with RTCP, curved-surface slicer, and three cooperation models — prototype machine, custom build, joint development. Prototype stage, built to order; not a production product.
 
+## Languages
+
+The hub's homepage is also available in four more languages; guides and hub pages are being localized in stages (see the rollout note in each language edition):
+
+- [Español — Inicio](https://5axis3d.com/es/): El centro de conocimiento de la impresión 3D de 5 ejes: impresión conformal (no planar), guías, panorama tecnológico y agenda abierta de investigación.
+- [Deutsch — Startseite](https://5axis3d.com/de/): Die Wissensplattform zum 5-Achs-3D-Druck: konformer, nicht-planarer FDM-Druck, Anleitungen, Technologielandschaft und offene Forschungsagenda.
+- [Français — Accueil](https://5axis3d.com/fr/): Le centre de connaissances de l'impression 3D 5 axes : impression conforme (non planaire), guides, panorama technologique et programme de recherche ouvert.
+- [Português — Início](https://5axis3d.com/pt/): O centro de conhecimento da impressão 3D de 5 eixos: impressão conformal (não planar), guias, panorama tecnológico e agenda aberta de pesquisa.
+
 ## About & policies
 
 - [About](https://5axis3d.com/about/): what this hub is, who runs it, and why.
