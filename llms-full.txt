@@ -139,3 +139,38 @@ Source: https://5axis3d.com/landscape/
 - Software: curved-surface (conformal) slicer, developed in-house
 - Stage: prototype — built to order for research institutes, universities and advanced makers; not a production product
 - Contact: cqq365@gmail.com — https://5axis3d.com/contact/
+
+
+## Events — Formnext 2026, viewed through a five-axis lens
+
+Formnext 2026 runs 17–20 November 2026 at Messe Frankfurt (Halls 11.0, 12.0, 12.1 and the Portalhaus). For visitors who care specifically about five-axis and non-planar (conformal) printing, the short list is: Layer Performance (non-planar, multi-axis slicing software, Hall 12.1, Booth F111), CMS (six-axis Krearob robotic large-format system with non-planar deposition, Hall 12.0, Stand D51), and the first Formnext Defence Summit on 17 November. The Formnext Awards public vote closes Thursday 19 November at 12:00 local time; winners are announced the same day from 16:10. Everything in the guide is filtered to five-axis and curved-surface relevance — the full show has hundreds of exhibitors, and the page deliberately does not try to list them.
+
+Key dates:
+
+- Mon 16 Nov — AM Innovation & Standards Summit (pre-show; ASTM International, ISO, America Makes among the organisers), Messe Frankfurt
+- Tue 17 Nov — Formnext Defence Summit, first edition, held alongside Formnext with the Additive Manufacturing Defence Network e.V., Messe Frankfurt
+- Tue 17 – Fri 20 Nov — Formnext 2026 exhibition (Tue–Thu 09:00–18:00, Fri 09:00–16:00), Halls 11.0, 12.0, 12.1, Portalhaus
+- Thu 19 Nov, 12:00 — Formnext Awards public voting closes (online vote counts as an additional jury vote), formnext.com/awards
+- Thu 19 Nov, from 16:10 — Awards ceremony, Industry & Application Stage, Hall 11.0, Booth D72
+
+Exhibitors worth your time if you work on five-axis or non-planar printing:
+
+- Layer Performance (Hall 12.1, Booth F111) — a comprehensively revised Layer Performance Slicer with expanded capabilities for non-planar and multi-axis additive manufacturing; Formnext's own pre-show software roundup singles it out for "simplifying the programming of non-planar multi-axis processes."
+- CMS (Hall 12.0, Stand D51) — the Krearob system, an extrusion unit on a six-axis industrial robot built for non-planar material deposition and large thermoplastic tooling, moulds and components; its Formnext debut. The gantry-based Kreator A3 is on the same stand.
+- DMG MORI (Hall 12.0, Booth D139) — adjacent: the LASERTEC 65 DED hybrid is a metal directed-energy-deposition machine integrating 5-axis simultaneous milling with deposition — the same kinematic questions (tool orientation, collision avoidance, RTCP-style control) five-axis printing has to answer.
+- Fraunhofer joint booth (Hall 11.0, Booth D31) — university and institute groups remain where much of the published non-planar and conformal work originates. (Specific five-axis exhibits at the booth were not confirmed at draft time.)
+- Not verified at draft time: 2026 booth details for CEAD, Caracol, Ai Build and Adaxis were not verified from official sources, so they are not listed as confirmed stands.
+
+The first Formnext Defence Summit (Tuesday 17 November, with the Additive Manufacturing Defence Network e.V.) focuses on additive manufacturing for defence and security applications — resilient supply chains, technological sovereignty, and the operational readiness of security-critical industries. Separate registration/accreditation applies.
+
+Formnext Awards 2026: six categories (AMbassador, Design, (R)Evolution, Rookie, Start-up, Sustainability). Public voting closes Thursday, 19 November 2026 at 12:00 p.m. local time and counts as one additional jury vote; winners are announced 19 November from 16:10 (Industry & Application Stage, Hall 11.0, Booth D72); finalists are exhibited at the Awards Showcase (Hall 11.0, Booth F60). None of this year's finalists is a dedicated five-axis or non-planar printing entry.
+
+FAQ:
+
+- When and where is Formnext 2026? 17–20 November 2026 at Messe Frankfurt, Germany, in Halls 11.0, 12.0, 12.1 and the Portalhaus.
+- What is the Formnext Defence Summit? A new conference format debuting on 17 November 2026 alongside Formnext, organised with the Additive Manufacturing Defence Network e.V. It addresses AM for defence and security, resilient supply chains and technological sovereignty. Separate registration/accreditation applies.
+- Until when can I vote for the Formnext Awards? Public online voting closes on Thursday, 19 November 2026 at 12:00 p.m. local time. The public vote counts as an additional jury vote; winners are announced the same day from 16:10.
+- Which Formnext 2026 exhibitors are most relevant to non-planar printing? Based on official pre-show coverage: Layer Performance (non-planar multi-axis slicing, Hall 12.1 F111) and CMS (Krearob six-axis robotic system with non-planar deposition, Hall 12.0 D51). This page lists only stands verified from organiser or exhibitor sources.
+- Is 5axis3d.com exhibiting at Formnext 2026? No. This page is an independent visitor guide published by 5axis3d.com, a reference site for five-axis 3D printing. It is not affiliated with Mesago Messe Frankfurt.
+
+Source: https://5axis3d.com/events/formnext-2026/
