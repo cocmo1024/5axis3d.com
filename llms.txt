@@ -13,6 +13,7 @@
 
 - [Technology landscape](https://5axis3d.com/landscape/): six routes to multi-axis printing compared — strengths, limits, maturity — plus the projects pursuing each. A November 2026 snapshot, openly incomplete.
 - [Formnext 2026 guide](https://5axis3d.com/events/formnext-2026/): the Frankfurt show (17–20 Nov 2026) filtered for five-axis and non-planar printing — the stands that matter, the first Defence Summit, and the Awards public vote closing 19 Nov at 12:00.
+- [Formnext 2026 news wire](https://5axis3d.com/events/formnext-2026/news/): dated, sourced briefs on five-axis and non-planar announcements during the show (17–20 Nov 2026), updated once a day; first watch item is the Stratasys platform reveal on 17 Nov at 13:00, Hall 12.1, Booth D129, alongside the F870 European debut.
 - [Glossary](https://5axis3d.com/glossary/): 12 terms defined once and used consistently — 5-axis 3D printing, conformal printing, non-planar printing, RTCP, trunnion, 3+2, orientation field, singularity and more.
 - [Open research agenda](https://5axis3d.com/research/): the field's standing problem list, with honest statuses.
 - [FAQ](https://5axis3d.com/faq/): straight answers about conformal printing and the prototype platform.

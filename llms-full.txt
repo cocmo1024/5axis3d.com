@@ -174,3 +174,21 @@ FAQ:
 - Is 5axis3d.com exhibiting at Formnext 2026? No. This page is an independent visitor guide published by 5axis3d.com, a reference site for five-axis 3D printing. It is not affiliated with Mesago Messe Frankfurt.
 
 Source: https://5axis3d.com/events/formnext-2026/
+## Events — Formnext 2026 five-axis news wire
+
+A dated log of what is actually announced at Formnext 2026 (17–20 November 2026, Messe Frankfurt) that touches five-axis and non-planar printing, updated once a day while the show runs. It is separate from the pre-show guide and does not repeat it. An item appears only with a direct five-axis, non-planar or multi-axis angle and an organiser or exhibitor source; scheduled reveals are marked as scheduled and updated once public; figures that cannot be verified from a primary source are not published.
+
+Watching on day one — Tuesday 17 November (both items at Hall 12.1, Booth D129, per Stratasys's press release of 29 October 2026):
+
+- Stratasys platform reveal (scheduled) — Tue 17 Nov, 13:00: Stratasys will unveil a new manufacturing-scale solution; the name, process and specifications are undisclosed until the reveal. Nothing published so far describes it as a five-axis system; the wire is watching it as the show's largest scheduled unknown and will update the entry with what is actually announced.
+- F870 European debut — the large-format FDM system makes its European debut at the same booth: factory-floor production of tooling, fixtures, jigs and manufacturing aids, fully heated build chamber of 1,000 × 610 × 610 mm, extended unattended operation; factory-floor applications from Toyota and GM are part of the exhibit. The F870 is a Cartesian FDM machine, not a five-axis printer; it is logged as context for the reveal and for the large-tooling questions five-axis exhibitors have to answer.
+
+Briefs from the show: none yet — the show opens Tuesday 17 November; sourced briefs are added once a day, newest first, through Friday 20 November.
+
+FAQ:
+
+- How is the news wire different from the Formnext 2026 guide? The guide is the pre-show briefing (stands, dates, deadlines known before the doors open); the wire is the during-show log of dated, sourced briefs on what is actually announced, 17–20 November. The two pages do not repeat each other.
+- What qualifies for the wire? Only announcements with a direct five-axis, non-planar or multi-axis angle, backed by an organiser or exhibitor source; unverified figures are not published.
+- How often is the wire updated? Once a day from 17 to 20 November 2026; after the show it stays as the record of the week.
+
+Source: https://5axis3d.com/events/formnext-2026/news/
